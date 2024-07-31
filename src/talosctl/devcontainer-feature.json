@@ -1,6 +1,6 @@
 {
     "name": "talosctl",
-    "id": "talosctl-cli",
+    "id": "talosctl",
     "version": "1.0.0",
     "description": "Install the talosctl to manage a talos cluster",
     "options": {
