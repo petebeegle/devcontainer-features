@@ -1,0 +1,16 @@
+{
+    "name": "talosctl",
+    "id": "talosctl-cli",
+    "version": "1.0.0",
+    "description": "Install the talosctl to manage a talos cluster",
+    "options": {
+        "version": {
+            "type": "string",
+            "description": "The version of talosctl to install",
+            "default": "latest"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+    ]
+}
