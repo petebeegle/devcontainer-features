@@ -1,12 +1,12 @@
 {
-    "name": "flux",
-    "id": "flux",
+    "name": "kubectx",
+    "id": "kubectx",
     "version": "1.0.0",
-    "description": "Install the flux cli",
+    "description": "Install the kubectx manage kubernetes contexts and namespaces",
     "options": {
         "version": {
             "type": "string",
-            "description": "The version of flux to install",
+            "description": "The version of kubectx to install",
             "default": "latest"
         }
     },

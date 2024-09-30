@@ -1,0 +1,8 @@
+{
+    "devcontainer": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "kubectx": {}
+        }
+    }
+}

@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 
-TALOSCTL_VERSION=${VERSION:-"latest"}
+KUBECTX_VERSION=${VERSION:-"latest"}
+
+export DEBIAN_FRONTEND=noninteractive
 
 check_packages() {
 	if ! dpkg -s "$@" >/dev/null 2>&1; then
@@ -37,26 +39,36 @@ get_bin() {
                     cli_arch=$arch
                     ;;
                 *)
-                    echo "There is no talosctl $os support for $arch. Please open an issue with your platform details."
+                    echo "There is no kubectx $os support for $arch. Please open an issue with your platform details."
                     exit 1
                     ;;
             esac
             ;;
         *)
-            echo "There is no talosctl support for $os/$arch. Please open an issue with your platform details."
+            echo "There is no kubectx support for $os/$arch. Please open an issue with your platform details."
             exit 1
             ;;
     esac
 
     os=$(echo $os | tr '[:upper:]' '[:lower:]')
-    echo "talosctl-$os-$cli_arch"
+    echo "kubectx-$os-$cli_arch"
 }
 
 
 check_packages curl ca-certificates
 binary=$(get_bin)
 
-# Install talosctl
-curl -LO https://github.com/talos-systems/talos/releases/${TALOSCTL_VERSION}/download/${binary}
-chmod +x $binary
-mv $binary /usr/local/bin/talosctl
+# Install kubectx
+if [ "${KUBECTX_VERSION}" = "latest" ]; then
+    curl -sSL "https://github.com/ahmetb/kubectx/archive/refs/heads/master.tar.gz" | tar -xz -C /opt
+    mv /opt/kubectx-master /opt/kubectx
+else
+    curl -sSL "https://github.com/ahmetb/kubectx/archive/refs/tags/v${KUBECTX_VERSION}.tar.gz" | tar -xz -C /opt
+    mv /opt/kubectx-${KUBECTX_VERSION} /opt/kubectx
+fi
+
+chmod +x /opt/kubectx/kubectx
+chmod +x /opt/kubectx/kubens
+
+mv /opt/kubectx/kubectx /usr/local/bin/kubectx
+mv /opt/kubectx/kubens /usr/local/bin/kubens
