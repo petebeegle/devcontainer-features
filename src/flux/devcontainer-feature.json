@@ -1,0 +1,17 @@
+{
+    "name": "flux",
+    "id": "flux",
+    "version": "1.0.0",
+    "description": "Install the flux cli",
+    "options": {
+        "version": {
+            "type": "string",
+            "description": "The version of flux to install",
+            "default": "latest"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube"
+    ]
+}
