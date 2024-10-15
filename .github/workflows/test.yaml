@@ -15,7 +15,6 @@ jobs:
         features:
           - talosctl
           - flux
-          - kubectl
           - kubectx
         baseImage:
           - debian:latest
@@ -38,7 +37,6 @@ jobs:
         features:
           - talosctl
           - flux
-          - kubectl
           - kubectx
     steps:
       - uses: actions/checkout@v3
