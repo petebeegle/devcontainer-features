@@ -17,6 +17,7 @@ jobs:
           - flux
           - kubectl
           - kubectx
+          - cilium
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -40,6 +41,7 @@ jobs:
           - flux
           - kubectl
           - kubectx
+          - cilium
     steps:
       - uses: actions/checkout@v3
 
