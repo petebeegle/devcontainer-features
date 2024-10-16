@@ -15,7 +15,6 @@ jobs:
         features:
           - talosctl
           - flux
-          - kubectl
           - kubectx
           - cilium
         baseImage:
@@ -39,7 +38,6 @@ jobs:
         features:
           - talosctl
           - flux
-          - kubectl
           - kubectx
           - cilium
     steps:
