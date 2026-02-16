@@ -1,0 +1,28 @@
+{
+    "name": "homelab-mcp",
+    "id": "homelab-mcp",
+    "version": "1.0.0",
+    "description": "Clone, install, and register the homelab MCP server",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/node:1"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "customizations": {
+        "claude-code": {
+            "mcpServers": {
+                "homelab": {
+                    "command": "homelab-mcp"
+                }
+            }
+        },
+        "cursor": {
+            "mcpServers": {
+                "homelab": {
+                    "command": "homelab-mcp"
+                }
+            }
+        }
+    }
+}
