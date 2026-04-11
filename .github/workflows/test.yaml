@@ -17,7 +17,6 @@ jobs:
           - flux
           - kubectx
           - cilium
-          - homelab-mcp
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -41,7 +40,6 @@ jobs:
           - flux
           - kubectx
           - cilium
-          - homelab-mcp
     steps:
       - uses: actions/checkout@v3
 
