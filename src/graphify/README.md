@@ -1,7 +1,7 @@
 
 # graphify (graphify)
 
-Install graphify - a tool for converting any input (code, docs, papers, images) into knowledge graphs with clustered communities and HTML/JSON outputs.
+Install graphify - a tool for converting any input to knowledge graphs
 
 ## Example Usage
 
@@ -17,19 +17,8 @@ Install graphify - a tool for converting any input (code, docs, papers, images) 
 |-----|-----|-----|-----|
 | version | The version of graphify to install | string | latest |
 
-## What is graphify?
 
-graphify is a powerful tool that transforms various types of input (source code, documentation, academic papers, images) into knowledge graphs. It provides:
 
-- Automatic knowledge graph generation from diverse input formats
-- Community detection and clustering of related concepts
-- HTML visualization and JSON export formats
-- Comprehensive audit reports for graph analysis
+---
 
-## Usage
-
-After installation, you can use graphify to analyze your inputs:
-
-```bash
-graphify --help
-```
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/petebeegle/devcontainer-features/blob/main/src/graphify/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
