@@ -1,0 +1,17 @@
+{
+    "name": "graphify",
+    "id": "graphify",
+    "version": "1.0.0",
+    "description": "Install graphify - a tool for converting any input to knowledge graphs",
+    "options": {
+        "version": {
+            "type": "string",
+            "description": "The version of graphify to install",
+            "default": "latest"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/python"
+    ]
+}
